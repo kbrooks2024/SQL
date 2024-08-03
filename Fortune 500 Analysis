@@ -86,7 +86,7 @@ select company_name, maternity_leave_weeks,
 CASE WHEN maternity_leave_weeks >=12 then "YES"       **** THE TEXAS LAW STATES EVERY COMPANY IS REQUIRED TO PROVIDE ATLEAST 12 WEEKS OF PAID MATERNITY LEAVE, WHICH COMAPANIES DO NOT ABIDE BY TEXAS LAW?*****
 ELSE "NO"
 end as LEGAL_WITHIN_TEXAS
-from fortune_companies;
+from fortune_companies; 
 
 
 
