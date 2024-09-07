@@ -60,31 +60,34 @@ VALUES
 
 
 
-
-select *                             ******* JUST SIMPLE CODE TO VIEW ALL THE DATA IN THE TABLE ******
+1) JUST SIMPLE CODE TO VIEW ALL THE DATA IN THE TABLE 
+select *                            
 from fortune_companies;
 
+2) WHICH COMPANIES EARN A REVENUE GREATER THAN 300m AND HAVE LESS THAN 5000 EMPLOYEES?
 select *
-from fortune_companies                ****** WHICH COMPANIES EARN A REVENUE GREATER THAN 300m AND HAVE LESS THAN 5000 EMPLOYEES? ******
+from fortune_companies               
 where revenue >=300
 and employees <=5000
 order by employees desc;
 
+3) WHICH COMPANIES IN THE TECHNOLOGY INDUSTRY HAVE THE GREATEST AVERAGE EMPLOYEE TENURE WHERE THE EMPLOYEES HAVE BEEN THERE FOR AN AVERAGE OF 5 OR MORE YEARS?
 select company_name,industry ,avg_employee_tenure
 from fortune_companies
-group by company_name                          ***** WHICH COMPANIES IN THE TECHNOLOGY INDUSTRY HAVE THE GREATEST AVERAGE EMPLOYEE TENURE WHERE THE EMPLOYEES HAVE BEEN THERE FOR AN AVERAGE OF 5 OR MORE YEARS?********
+group by company_name                         
 having avg_employee_tenure >= 5
 and industry = "Technology"
 order by avg_employee_tenure desc;
 
+4) OUT OF ALL THE FORTUNE 500 COMPANIES, WHICH INDUSTRY MAKES THE LEAST AMOUNT OF REVENUE AND WHICH INDUSTRY MAKES THE MOST REVENUE?
 select industry, SUM(revenue) AS total_revenue
-from fortune_companies                            ******* OUT OF ALL THE FORTUNE 500 COMPANIES, WHICH INDUSTRY MAKES THE LEAST AMOUNT OF REVENUE AND WHICH INDUSTRY MAKES THE MOST REVENUE?*****
+from fortune_companies                           
 group by industry
 order by total_revenue asc;
 
+5) THE TEXAS LAW STATES EVERY COMPANY IS REQUIRED TO PROVIDE ATLEAST 12 WEEKS OF PAID MATERNITY LEAVE, WHICH COMAPANIES DO NOT ABIDE BY TEXAS LAW?
 select company_name, maternity_leave_weeks,
-CASE WHEN maternity_leave_weeks >=12 then "YES"       **** THE TEXAS LAW STATES EVERY COMPANY IS REQUIRED TO PROVIDE ATLEAST 12 WEEKS OF PAID MATERNITY LEAVE, WHICH COMAPANIES DO NOT ABIDE BY TEXAS LAW?*****
-ELSE "NO"
+CASE WHEN maternity_leave_weeks >=12 then "YES"      
 end as LEGAL_WITHIN_TEXAS
 from fortune_companies; 
 
