@@ -6,7 +6,7 @@ WHERE Country != "USA";
 2) Show only the Customers from Brazil.
 SELECT *
 FROM customers 
-Where Country = "Brazil";
+Where Country = "Brazil"; 
 
 3) Find the Invoices of customers who are from Brazil. The resulting table should show the customer's full name, Invoice ID, Date of the invoice, and billing country.
 SELECT FirstName, LastName, InvoiceId, InvoiceDate, BillingCountry
