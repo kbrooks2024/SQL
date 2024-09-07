@@ -16,3 +16,4 @@ GROUP BY street)
 SELECT rating,street, 'safe lane' as 'label'
 FROM safety_average_cte
 WHERE rating >=4;
+ 
