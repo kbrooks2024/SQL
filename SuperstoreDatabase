@@ -28,16 +28,16 @@ VALUES
 
 
 
-
-SELECT item_name, price                 ** What is the are the most expensive items found in the store? **
+1) What is the are the most expensive items found in the store?
+SELECT item_name, price              
 FROM superstore                               
 ORDER BY price desc;
 
-
-SELECT avg(price)                        ** What is the average price of an item in the superstore? **
+2) What is the average price of an item in the superstore?
+SELECT avg(price)                      
 FROM superstore;
 
-
-SELECT sum(price),category               ** Our shareholders would like to know the total price of all Kitchen Supplies in the store,can you figure that out for them? **
+3) Our shareholders would like to know the total price of all Kitchen Supplies in the store,can you figure that out for them?
+SELECT sum(price),category               
 FROM superstore
 WHERE category="Kitchen Supplies"
